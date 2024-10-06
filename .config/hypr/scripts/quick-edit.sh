@@ -2,7 +2,7 @@
 # Rofi menu for Quick Edit / View of Settings (SUPER E)
 
 # define your preferred text editor and terminal to use
-editor=${EDITOR:-nano}
+editor=${EDITOR:-nvim}
 tty=kitty
 
 configs="$HOME/.config/hypr"
@@ -19,7 +19,7 @@ menu(){
 }
 
 main() {
-    choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/compact.rasi | cut -d. -f1)
+    choice=$(menu | rofi -i -dmenu -config ~/.config/rofi/custom/compact.rasi | cut -d. -f1)
     case $choice in
         1)
             $tty $editor "$configs/env"
