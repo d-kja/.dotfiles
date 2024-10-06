@@ -1,0 +1,46 @@
+{
+  "include": [
+    "$HOME/.config/waybar/modules/default.json",
+    "$HOME/.config/waybar/modules/workspaces.json",
+    "$HOME/.config/waybar/modules/custom.json",
+    "$HOME/.config/waybar/modules/groups.json"
+  ],
+  "layer": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top",
+  "spacing": 2,
+  "fixed-center": true,
+  "ipc": true,
+  "margin-top": 6,
+  "margin-left": 8,
+  "margin-right": 8,
+  "modules-left": [
+    "group/app_drawer",
+    "custom/separator#dot-line",
+    "group/mobo_drawer",
+    "custom/separator#line",
+    "custom/weather"
+  ],
+  "modules-center": [
+    "custom/swaync",
+    "custom/cava_mviz",
+    "custom/separator#dot-line",
+    "clock",
+    "custom/separator#line",
+    "hyprland/workspaces#kanji",
+    "custom/separator#dot-line",
+    "idle_inhibitor",
+    "custom/hint"
+  ],
+  "modules-right": [
+    "network#speed",
+    "group/connections",
+    "custom/separator#line",
+    "tray",
+    "mpris",
+    "group/audio",
+    "custom/separator#dot-line",
+    "group/status"
+  ]
+}

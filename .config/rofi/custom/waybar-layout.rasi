@@ -1,0 +1,6 @@
+@import "~/.config/rofi/custom/waybar-style.rasi" 
+
+/* ---- Entry ---- */ 
+entry {
+  placeholder: "🖼️ Choose Waybar Layout";
+}

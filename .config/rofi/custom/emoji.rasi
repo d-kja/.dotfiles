@@ -1,0 +1,22 @@
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Entry ---- */
+entry {
+  width: 48.5%;
+  placeholder: "💫 Search Emoji's";
+}
+
+
+/* ---- Listview ---- */
+listview {
+  columns: 1;
+  lines: 8;
+}
+
+/* ---- Element ---- */
+element {
+  padding: 8px;
+  spacing: 6px;
+}
+
+

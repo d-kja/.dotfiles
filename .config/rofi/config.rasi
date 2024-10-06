@@ -1,0 +1,46 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config 1440p */
+
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Window ---- */
+window {
+    width:	60%;
+}
+
+/* ---- Entry input ---- */
+entry {
+    width:	18%;
+    border-radius: 6px;
+}
+
+/* ---- Mode Switcher ---- */
+button {
+    width:	120px;
+    border-radius: 6px;
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 8;
+  lines: 5;
+  fixed-height:	true;
+}
+
+/* ---- Element ---- */
+element {
+  orientation: vertical;
+  padding: 12px;
+  spacing: 6px;
+  border-radius: 12px;
+}
+
+element-icon {
+  size: 5%;
+}
+
+element-text {
+  font: "Fira Code SemiBold 12";
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}

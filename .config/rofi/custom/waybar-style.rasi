@@ -1,0 +1,41 @@
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Configuration ---- */
+configuration {
+  modi: "drun";
+}
+
+window {
+  width: 35%;
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+  children:
+    [ "listview"];
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 2;
+  lines: 6;
+}
+
+element {
+  orientation: horizontal;
+
+  padding: 32px 44px;
+
+  spacing: 8px;
+  border-radius: 12px;
+}
+
+element-icon {
+  size: 0%;
+}
+
+element-text {
+  font: "Fira Code SemiBold 12";
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}

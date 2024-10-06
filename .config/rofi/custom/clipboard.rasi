@@ -1,0 +1,13 @@
+@import "~/.config/rofi/master-config.rasi"  
+
+/* ---- Entry ---- */
+entry {
+  width: 48.5%;
+  placeholder: "📋 Search Clipboard";
+}
+
+/* ---- Listview ---- */
+listview {
+  columns: 1;
+  lines: 8;
+}

@@ -1,0 +1,290 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Master Config 1440p*/
+
+/* ---- Configuration ---- */
+
+configuration {
+	font:						"Fira Code SemiBold 13";
+	modi:                       "drun,run,filebrowser";
+    show-icons:                 true;
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Windows";
+	drun-display-format:        "{name}";
+	hover-select:               true;
+	me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+	window-format:              "{w} · {c} · {t}";
+	dpi:						1;
+}
+
+/* ---- Load wallust colors ---- */
+@theme "~/.config/rofi/colors.rasi"
+
+/* ---- Global Properties ---- */
+* {
+
+    background-alt:              @selected-active-background; // Buttons background
+    selected:                    @selected-urgent-background; // Button selected
+    active:                      @selected-normal-background; // Window activated
+    urgent:                      @selected; // When hovering the activated window (maybe more?)
+
+    text-selected:               @text;
+    text-color:                  @foreground;
+    border-color:                @selected;
+}
+
+/* ---- Window ---- */
+window {
+    enabled:                    true;
+    fullscreen:                 false;
+    location:                   center;
+    anchor:                     center;
+
+    transparency:               "real";
+    cursor:                     "default";
+
+    width:                      50%;
+    spacing:                    0px;
+
+    border:                     2px;
+    border-radius:              8px;
+
+    background-color:           @background;
+}
+
+/* ----- Main Box ----- */
+mainbox {
+  enabled: true;
+  orientation: vertical;
+
+	padding: 8px;
+
+  children: [ "inputbar", "listbox" ];
+  background-color: transparent;
+}
+
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled: true;
+    orientation: horizontal;
+    children: ["entry", "dummy", "mode-switcher" ];
+
+    border-radius: 4px;
+    padding: 12px 8px 32px;
+
+    background-color:            transparent;
+}
+
+/* ---- Entry input ---- */
+entry {
+    enabled:                     true;
+    expand:                      false;
+    cursor:                      text;
+
+    width:                       20%;
+    padding:                     10px 12px;
+    border-radius:               6px;
+
+    background-color:            @selected;
+    text-color:                  @text-selected;
+
+    placeholder-color:           inherit;
+    placeholder:                 "🔍 Search";
+}
+
+/* ---- Listbox ---- */
+listbox {
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+
+    background-color:            transparent;
+
+    padding:                     12px;
+    spacing:                     6px;
+}
+
+/* ---- Listview ---- */
+listview {
+    layout:                      vertical;
+    cycle:                       false;
+    enabled:                     true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    reverse:                     false;
+
+    border:                      0px;
+
+    lines:                       6;
+    columns:                     2;
+    spacing:                     12px;
+
+    fixed-height:                false;
+    fixed-columns:               true;    
+
+    background-color:            transparent;
+}
+
+/* ---- Dummy ---- */
+dummy {
+    expand:                      true;
+    background-color:            transparent;
+}
+
+/* ---- Mode Switcher ---- */
+mode-switcher{
+    enabled:                     true;
+
+    spacing:                     8px;
+    background-color:            transparent;
+}
+
+button {
+    cursor: pointer;
+
+    width: 5%;
+
+    padding: 4px 6px;
+    border-radius: 6px;
+
+    background-color: @text-selected;
+    text-color: @text-color;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @text-selected;
+}
+
+/* ---- Scrollbar ---- */
+scrollbar {
+    border: 0;
+    width: 4px;
+
+    padding: 0;
+
+    handle-width: 8px ;
+    handle-color: @border-color;
+}
+
+/* ---- Elements ---- */
+element {
+    enabled: true;
+    cursor: pointer;
+
+    spacing: 12px;
+    padding: 8px;
+    border-radius: 6px;
+
+    background-color: transparent;
+}
+
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+
+    border-radius: 6px;
+}
+
+element normal.urgent {
+    background-color: @urgent;
+    text-color: @foreground;
+
+    border-radius: 6px;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @foreground;
+
+    border-radius: 6px;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @text-selected;
+
+    border-radius: 6px;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @text-selected;
+
+    border-radius: 6px;
+}
+
+element selected.active {
+    background-color: @urgent;
+    text-color: @text-selected;
+
+    border-radius: 6px;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: inherit;
+
+    border-radius: 6px;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+    text-color: inherit;
+
+    border-radius: 6px;
+}
+
+element alternate.active {
+    background-color: transparent;
+    text-color: inherit;
+
+    border-radius: 6px;
+}
+
+element-icon {
+    background-color: transparent;
+
+    text-color: inherit;
+    cursor: inherit;
+
+    size: 36px;
+}
+element-text {
+    font:	"Fira Code SemiBold 16";
+
+    text-color: inherit;
+    cursor: inherit;
+
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+
+    background-color: transparent;
+}
+
+/* ---- Message ---- */
+message {
+    background-color: transparent;
+    border: 0px;
+}
+
+textbox {
+    padding:                     8px;
+    border-radius:               12px;
+
+    background-color:            @background-alt;
+    text-color:                  @background;
+
+    horizontal-align:            0.0;
+    vertical-align:              0.5;
+}
+
+error-message {
+    padding:                     8px;
+    border-radius:               12px;
+
+    background-color:            @background-alt;
+    text-color:                  @background;
+}
