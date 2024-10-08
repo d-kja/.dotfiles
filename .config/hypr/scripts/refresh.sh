@@ -31,6 +31,6 @@ sleep 0.5
 swaync > /dev/null 2>&1 &
 
 # relaunch ags
-# ags &
+ags &
 
 exit 0
