@@ -1,3 +1,3 @@
 #!/bin/bash
 
-flatpak run --socket=wayland com.discordapp.Discord --enable-features=UseOzonePlatform --ozone-platform=wayland
+flatpak run --socket=wayland dev.vencord.Vesktop --enable-features=UseOzonePlatform --ozone-platform=wayland
