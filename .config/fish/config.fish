@@ -4,6 +4,10 @@ if status is-interactive
     # Remove greeting
     set fish_greeting
 
+    # Update done.fish
+    set -U __done_min_cmd_duration 10000
+    set -U __done_notification_urgency_level low
+
     # Aliases   
     alias rmf="rm -rf"
     alias open="xdg-open"
