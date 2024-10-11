@@ -7,4 +7,6 @@ end)
 -- another way to run Terminal commands:
 -- Map("t", "<C-h>", "<cmd>wincmd h<CR>")
 
+vim.opt.clipboard = 'unnamedplus'
+
 return {}
