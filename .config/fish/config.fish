@@ -2,7 +2,10 @@
 
 if status is-interactive
     # Remove greeting
-    set fish_greeting
+    # REMOVE > set fish_greeting
+    function fish_greeting
+      fastfetch
+    end
 
     # Update done.fish
     set -U __done_min_cmd_duration 10000
