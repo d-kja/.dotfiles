@@ -37,6 +37,11 @@ if status is-interactive
     alias docker-rootless="docker context use rootless"
     alias docker-host="export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock"
 
+    alias cgrub-find="sudo awk -F\' '\$1==\"menuentry \" {print \$2}' /boot/grub2/grub.cfg"
+    alias cgrub-default="sudo grub2-set-default \"\$(cgrub-find)\""
+    alias cgrub-rebuild="sudo grub2-mkconfig -o \"\$(readlink -e /etc/grub2.cfg)\""
+    alias cgrub-update="cgrub-default && cgrub-rebuild"
+
     alias f="yazi"
     alias ze="zellij"
     alias gui="gitui"
