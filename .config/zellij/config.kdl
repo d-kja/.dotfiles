@@ -126,7 +126,7 @@ keybinds clear-defaults=true {
     }
 
     session {
-        bind "Ctrl o" { SwitchToMode "Normal"; }
+        bind "Ctrl l" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
 
         bind "d" { Detach; }

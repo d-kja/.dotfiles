@@ -72,6 +72,10 @@ if status is-interactive
     # BUN
     set --export BUN_INSTALL "$HOME/.bun"
     set --export PATH $BUN_INSTALL/bin $PATH
+    
+    # DOCKER
+    # set --export PATH /usr/bin
+    set DOCKER_HOST "unix:///run/user/1000/docker.sock"
 
     # ZELLIJ
     eval (zellij setup --generate-auto-start fish | string collect) 

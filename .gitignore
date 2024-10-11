@@ -22,7 +22,10 @@
 .config/ibus
 .config/ags
 .config/go
+.config/systemd
 
+.pki
+.docker
 .ssh
 .swt
 .var
@@ -45,6 +48,7 @@ go
 www
 
 Desktop
+Documents
 Downloads
 Pictures
 Videos
