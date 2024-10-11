@@ -35,19 +35,19 @@ if status is-interactive
     alias docker-host="export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock"
 
     alias f="yazi"
+    alias ze="zellij"
     alias gui="gitui"
     alias lat="laterem"
 
     # ------------------------- #
 
-    # CONFIG
-
     # Binaries
+
     set PATH $PATH /opt/nvim-linux64/bin
     set PATH $PATH $HOME/.local/bin
 
     # Variables
-  #
+
     # RUST UP
     set PATH $PATH "$HOME/.cargo/bin"
 
@@ -69,5 +69,8 @@ if status is-interactive
     # BUN
     set --export BUN_INSTALL "$HOME/.bun"
     set --export PATH $BUN_INSTALL/bin $PATH
+
+    # ZELLIJ
+    eval (zellij setup --generate-auto-start fish | string collect) 
 end
 
