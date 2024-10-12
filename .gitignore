@@ -2,6 +2,8 @@
 .cache
 .local
 
+.config/Slack
+.config/spotify
 .config/xdg-terminals.list
 .config/mimeapps.list
 .config/.gsd-*
