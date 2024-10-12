@@ -31,8 +31,8 @@ if status is-interactive
 
     alias dps="docker ps"
     alias dc="docker compose"
-    alias dcu="du up -d"
-    alias dcd="cu down"
+    alias dcu="dc up -d"
+    alias dcd="dc down"
     alias docker-start="systemctl start docker"
     alias docker-rootless="docker context use rootless"
     alias docker-host="export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock"

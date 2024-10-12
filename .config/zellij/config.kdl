@@ -2,6 +2,7 @@
 keybinds clear-defaults=true {
     normal {
         unbind "Ctrl o"
+        unbind "Ctrl q"
 
         bind "Ctrl x" { SwitchToMode "Pane"; }
     }
@@ -143,7 +144,6 @@ keybinds clear-defaults=true {
   
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl q" { Quit; }
         bind "Alt n" { NewPane; }
         bind "Alt i" { MoveTab "Left"; }
         bind "Alt o" { MoveTab "Right"; }
