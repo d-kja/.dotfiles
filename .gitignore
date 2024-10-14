@@ -4,6 +4,9 @@
 
 .config/Slack
 .config/spotify
+.config/Vencord
+.config/vesktop
+.config/discord
 .config/xdg-terminals.list
 .config/mimeapps.list
 .config/.gsd-*
@@ -25,6 +28,7 @@
 .config/ags
 .config/go
 .config/systemd
+.config/autostart
 
 .pki
 .docker
