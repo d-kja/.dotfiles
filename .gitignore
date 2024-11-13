@@ -3,6 +3,7 @@
 .local
 
 .config/Slack
+.config/Insomnia
 .config/spotify
 .config/Vencord
 .config/vesktop
